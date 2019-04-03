@@ -21,7 +21,7 @@ module ForIonic
   class Application < Rails::Application
     # Expose our application's helpers to Administrate
     config.to_prepare do
-      Administrate::ApplicationController.helper For-ionic::Application.helpers
+      Administrate::ApplicationController.helper ForIonic::Application.helpers
     end
     config.active_job.queue_adapter = :sidekiq
     config.application_name = Rails.application.class.parent_name
@@ -35,5 +35,21 @@ module ForIonic
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # COR's
+    # set debug = true to enable logging
+    config.middleware.insert_before 0, Rack::Cors, :debug => false, :logger => (-> {Rails.logger}) do
+      allow do
+        origins /localhost./,
+                /0\.0\.0\.0/
+
+        resource '/api/v1/*',
+                 :headers => :any,
+                 :methods => [:get, :post, :delete, :put, :options, :head],
+                 :credentials => true,
+                 :max_age => 0
+      end
+
+    end
   end
 end

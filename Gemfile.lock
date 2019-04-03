@@ -104,6 +104,8 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    devise-token_authenticatable (1.1.0)
+      devise (>= 4.0.0, < 5.0.0)
     devise_masquerade (0.6.5)
       devise (>= 2.1.0)
       railties (>= 3.0)
@@ -198,6 +200,7 @@ GEM
     popper_js (1.14.5)
     puma (3.12.1)
     rack (2.0.7)
+    rack-cors (1.0.3)
     rack-protection (2.0.5)
       rack
     rack-proxy (0.6.5)
@@ -315,6 +318,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.6, >= 4.6.1)
   devise-bootstrapped!
+  devise-token_authenticatable
   devise_masquerade (~> 0.6.2)
   font-awesome-sass (~> 5.6, >= 5.6.1)
   friendly_id (~> 5.2, >= 5.2.5)
@@ -328,6 +332,7 @@ DEPENDENCIES
   omniauth-twitter (~> 1.4)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
+  rack-cors
   rails (~> 5.2.2, >= 5.2.2.1)
   sass-rails (~> 5.0)
   sidekiq (~> 5.2, >= 5.2.5)

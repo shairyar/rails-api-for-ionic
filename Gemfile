@@ -57,6 +57,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'administrate', github: 'excid3/administrate', branch: 'zeitwerk'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'devise', '~> 4.6', '>= 4.6.1'
+gem 'devise-token_authenticatable'
 gem 'devise-bootstrapped', github: 'excid3/devise-bootstrapped', branch: 'bootstrap4'
 gem 'devise_masquerade', '~> 0.6.2'
 gem 'font-awesome-sass', '~> 5.6', '>= 5.6.1'
@@ -71,3 +72,4 @@ gem 'sidekiq', '~> 5.2', '>= 5.2.5'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
 gem 'whenever', require: false
 gem 'webpacker', '~> 4.0.1'
+gem 'rack-cors'
