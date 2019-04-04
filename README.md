@@ -1,24 +1,13 @@
-# README
+# Rails API for mobile app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo contains the api that is being used by [this](https://github.com/shairyar/ionic-with-login-signup) ionic app.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+bundle
+rake db:create
+rake db:migrate
+foreman start
+```
+Rails [JumpStart](https://github.com/excid3/jumpstart) template was used to create the rails app. All it does is allows user to login/signup.
